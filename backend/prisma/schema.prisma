@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:Anil2002@@localhost:5432/calender?schema=public"
+  url      = "postgresql://postgres:Anil2002@@localhost:5432/mydb?schema=public"
 }
 model User{
   id Int @id @default(autoincrement())
