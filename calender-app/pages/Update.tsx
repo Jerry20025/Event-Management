@@ -12,7 +12,7 @@ const Update=()=>{
     const [description,setDescription]=useState("");
     const [eventDate,setEventDate]=useState("");
     async function handleUpdateEvent(){
-        await axios.put(`https://event-management-1kjv.onrender.com/api/v1/event/update/${id}`,{
+        await axios.put(`http://localhost:3000/api/v1/event/update/${id}`,{
             title,
             description,
             date:eventDate

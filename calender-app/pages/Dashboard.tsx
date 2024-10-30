@@ -21,7 +21,7 @@ const Dashboard = () => {
     const navigate=useNavigate();
     useEffect(() => {
         const fetchEvents = async () => {  
-            const response = await axios.get("https://event-management-1kjv.onrender.com/api/v1/event/allevent", {
+            const response = await axios.get("http://localhost:3000/api/v1/event/allevent", {
               withCredentials:true,
             });
             setEvents(response.data);
@@ -107,7 +107,7 @@ function BarSide({ events,username }: { events: Event[],username?:string }) {
   const navigate=useNavigate();
   async function handleDelete(id:number){
     console.log(id);
-    const response=await axios.delete(`https://event-management-1kjv.onrender.com/api/v1/event/delete/${id}`,{
+    const response=await axios.delete(`http://localhost:3000/api/v1/event/delete/${id}`,{
       withCredentials:true,
     });
     window.location.reload();

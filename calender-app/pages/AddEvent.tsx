@@ -19,7 +19,7 @@ const AddEvent = () => {
     const username=searchParams.get('username');            
     async function handleAddEvent(){
         try {
-            const response = await axios.post("https://event-management-1kjv.onrender.com/api/v1/event/create", {
+            const response = await axios.post("http://localhost:3000/api/v1/event/create", {
                 title,
                 description, 
                 date: eventDate
