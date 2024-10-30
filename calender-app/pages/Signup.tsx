@@ -15,7 +15,7 @@ const Signup: React.FC = () => {
   const navigate = useNavigate();
   async function handleSignUp() {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/signup", {
+      const response = await axios.post("https://event-management-1kjv.onrender.com/api/v1/user/signup", {
         name,
         email,
         password

@@ -14,7 +14,7 @@ const Signin: React.FC = () => {
   // const [username,setUserName]=useState("");
   async function handleSignin() {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/signin", {
+      const response = await axios.post("https://event-management-1kjv.onrender.com/api/v1/user/signin", {
         email,
         password
       },{
@@ -37,7 +37,7 @@ const Signin: React.FC = () => {
 
   async function handleLogout() {
     try {
-      await axios.post("http://localhost:3000/api/v1/user/logout", {});
+      await axios.post("https://event-management-1kjv.onrender.com/api/v1/user/logout", {});
       localStorage.removeItem("token");
       navigate("/signin");
     } catch (error) {
