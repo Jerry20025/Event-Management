@@ -75,9 +75,9 @@ const Dashboard = () => {
           <div className=' flex flex-col  gap-4 '>
           <div className='flex flex-col gap-4  bg-jerry p-4 rounded-md shadow-lg shadow-black'>
             {isEvent ? 
-                  <div className='text-black text-bold bg-tom px-4 py-2 rounded-md'>Hey! You have an event today</div> 
+                  <div className='text-black  bg-tom px-4 py-2 rounded-md'>Hey! You have an event today</div> 
                   : 
-                  <div className='text-black text-bold bg-tom px-4 py-2 rounded-md'>Today is No Event</div>
+                  <div className='text-black bg-tom px-4 py-2 rounded-md'>Today is No Event</div>
                 }
             <div className='text-center sm:text-left p-2 max-h-[200px] overflow-y-scroll w-[300px]'>
                 {isEvent && <BarSide events={todayEvent} />}

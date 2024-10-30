@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
 const event_1 = __importDefault(require("./routes/event"));
 const app = (0, express_1.default)();
+const port = process.env.PORT || 3000;
 app.use((0, cors_1.default)({
     origin: true,
     credentials: true
@@ -19,6 +20,6 @@ app.use((req, res, next) => {
 app.use(express_1.default.json());
 app.use('/api/v1/user', user_1.default);
 app.use('/api/v1/event', event_1.default);
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
