@@ -8,7 +8,7 @@ type InputProps = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Input = ({ placeholder, type = "text", value, onChange }) => {
+const Input = ({ placeholder, type = "text", value, onChange }:InputProps) => {
   return (
     <input
       type={type}
